@@ -1,10 +1,12 @@
 .PHONY: all check clean
 
-all: 
-	gcc test.c
+all: test
+
+test: test.c
+	gcc test.c -o test
 
 check: all
-	./a.out
+	./test
 
 clean:
-	rm -f a.out
+	rm -f test
